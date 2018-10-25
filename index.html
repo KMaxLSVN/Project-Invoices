@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test for Intern</title>
+    <link rel="stylesheet" href="./css/normalized.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="./js/main.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div class="card">
+            <div class="card-header">
+                <div class="main-title"><span>Invoices</span></div>
+            </div>
+            <div class="card-body">
+                <div class="card-body-action makeup">
+                    <span class="title">Actions</span>
+                    <button type="button" class="buttons" onclick="addInvoices()">Add new</button>
+                </div>
+                <div class="card-body-list makeup">
+                    <span class="title dpl">Invoices</span>
+                    <span class="no-items">There are no invoices</span>
+                    <table class="invoices-table">
+                        <thead>
+                            <tr>
+                                <th>Create</th>
+                                <th>No</th>
+                                <th>Supply</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10-03-2018</td>
+                                <td>INV-010101</td>
+                                <td>10-03-2018</td>
+                                <td>Test invoice</td>
+                            </tr>
+                            <tr>
+                                <td>10-03-2018</td>
+                                <td>INV-010101</td>
+                                <td>10-03-2018</td>
+                                <td>Test invoice</td>
+                            </tr>
+                            <tr>
+                                <td>10-03-2018</td>
+                                <td>INV-010101</td>
+                                <td>10-03-2018</td>
+                                <td>Test invoice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="invoice-view">
+    <form action="javascript:void(0)" class="invoice-form" method="post" onsubmit="validate(event.target)">
+        <div class="container">
+            <div class="form-row">
+                <div class="input-item">
+                    <input type="text" name="number" id="form-number" placeholder="Enter number">
+                    <label for="form-number" class="input-label">Number:</label>
+                    <span><i class="fas fa-cog"></i></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-item">
+                    <input type="text" name="data_invoice" id="form-invoiceData" placeholder="Select date">
+                    <label for="form-invoiceData" class="input-label">Invoice data:</label>
+                    <span><i class="far fa-calendar-alt"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-row">
+                <div class="input-item">
+                    <input type="text" name="data_supply" id="form-supplyData" placeholder="Select date">
+                    <label for="form-supplyData" class="input-label">Supply Data:</label>
+                    <span><i class="far fa-calendar-alt"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-row form-comment">
+                <div class="input-item">
+                    <textarea name="comment" id="form-comment" placeholder="Describe invoice"></textarea>
+                    <label for="form-comment" class="input-label">Comment:</label>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" value="Save" name="submit">
+        </div>
+    </form>
+</div>
+</body>
+</html>
