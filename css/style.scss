@@ -49,6 +49,8 @@
         }
       }
       .card-body-list{
+        position: relative;
+        min-height: 300px;
         .invoices-table{
           border-collapse: collapse;
           width: 100%;
@@ -173,7 +175,7 @@ input, textarea{
     }
   }
 }
-//Validation
+//-----Validation-----
 .focused{
   border-color: #7a6f8e;
 }
@@ -188,6 +190,31 @@ input, textarea{
   display: none;
   font-size: 33px;
 }
+//-----Loader-----
+@keyframes spin {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+.loader{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 77;
+  font-size: 7em;
+  color: #4545f1;
+  i {
+    animation-name: spin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
 
 @media
 only screen

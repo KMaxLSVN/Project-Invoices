@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function(event){
         }
     };
     sendRequest('./js/db.json', requestOption, function (xhr) {
+        //-----Loader-----
+        document.getElementsByClassName('loader')[0].style.display = 'none';
         //-----Rendering invoices-----
         renderInvoices(xhr, true);
     });

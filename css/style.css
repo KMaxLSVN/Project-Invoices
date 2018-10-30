@@ -34,17 +34,20 @@
       .wrapper .card .card-body .buttons:active {
         transform: translateY(2px);
         filter: saturate(150%); }
-    .wrapper .card .card-body .card-body-list .invoices-table {
-      border-collapse: collapse;
-      width: 100%; }
-      .wrapper .card .card-body .card-body-list .invoices-table th, .wrapper .card .card-body .card-body-list .invoices-table td {
-        padding: 10px; }
-      .wrapper .card .card-body .card-body-list .invoices-table thead {
-        text-align: left; }
-      .wrapper .card .card-body .card-body-list .invoices-table tbody tr:nth-of-type(odd) {
-        background-color: #f1e7fd; }
-      .wrapper .card .card-body .card-body-list .invoices-table tbody td {
-        width: 25%; }
+    .wrapper .card .card-body .card-body-list {
+      position: relative;
+      min-height: 300px; }
+      .wrapper .card .card-body .card-body-list .invoices-table {
+        border-collapse: collapse;
+        width: 100%; }
+        .wrapper .card .card-body .card-body-list .invoices-table th, .wrapper .card .card-body .card-body-list .invoices-table td {
+          padding: 10px; }
+        .wrapper .card .card-body .card-body-list .invoices-table thead {
+          text-align: left; }
+        .wrapper .card .card-body .card-body-list .invoices-table tbody tr:nth-of-type(odd) {
+          background-color: #f1e7fd; }
+        .wrapper .card .card-body .card-body-list .invoices-table tbody td {
+          width: 25%; }
 
 input, textarea {
   background-color: inherit;
@@ -147,6 +150,29 @@ input, textarea {
 .no-items {
   display: none;
   font-size: 33px; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 77;
+  font-size: 7em;
+  color: #4545f1; }
+  .loader i {
+    animation-name: spin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
 
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
   .main-title {
