@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function(event){
         renderInvoices(xhr, true);
     });
 
-
 //=====Validation=====
     let number = document.getElementById('form-number'),
         dataInv = document.getElementById('form-invoiceData'),
@@ -81,9 +80,6 @@ document.addEventListener("DOMContentLoaded", function(event){
             this.classList.remove('invalid');
         }
     });
-
-
-
 });
 //End content load
 
@@ -99,8 +95,6 @@ function isValid(form) {
             elem[prop].classList.add('invalid');
         }
     }
-
-
     return !document.getElementsByClassName('invalid').length;
 }
 //-----Assembly form-----
